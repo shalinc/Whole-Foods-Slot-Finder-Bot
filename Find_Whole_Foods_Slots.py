@@ -94,7 +94,7 @@ def check_for_slot_and_text(driver):
     if header_text_schedule_order.text == SCHEDULE_YOUR_ORDER:
         # check if container select a day has unavailable option
         check_slot_options_eles = driver.find_elements_by_class_name(SCHEDULE_SLOTS_ID)
-        print("checking for: ", len(check_slot_option_ele), "days")
+        print("checking for: ", len(check_slot_options_eles), "days")
         for slot_option in check_slot_options_eles:
             if NOT_AVAILABLE not in slot_option.text:
                 print("Slot Found. Alerting user ...", slot_option.text)
